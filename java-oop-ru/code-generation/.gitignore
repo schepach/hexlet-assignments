@@ -1,0 +1,16 @@
+.gradle/
+build/
+caches/
+.idea/
+*.iml
+.DS_Store
+out/
+/.gradle/
+*.class
+*.gpg
+gradle/
+gradlew
+gradlew.bat
+gradle.properties
+*.DS_Store
+*.hprof
