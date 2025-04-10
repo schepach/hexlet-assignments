@@ -1,7 +1,7 @@
-@import exercise.util.NamedRoutes;
+@import exercise.util.NamedRoutes
 @import exercise.dto.MainPage
 
-@param MainPage  page
+@param MainPage page
 
 
 @template.layout.page(
