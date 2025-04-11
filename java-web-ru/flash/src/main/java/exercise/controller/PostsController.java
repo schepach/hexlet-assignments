@@ -8,6 +8,7 @@ import exercise.model.Post;
 import exercise.repository.PostRepository;
 import exercise.util.NamedRoutes;
 import io.javalin.http.Context;
+import io.javalin.http.HttpStatus;
 import io.javalin.http.NotFoundResponse;
 import io.javalin.validation.ValidationException;
 
@@ -57,7 +58,8 @@ public class PostsController {
             page.setFlash("Validation error! Name must be more than 2 letters!");
             page.setFlashType(FlashType.danger);
             ctx.sessionAttribute("flashType", page.getFlashType());
-            ctx.render("posts/build.jte", model("page", page));
+            ctx.render("posts/build.jte", model("page", page))
+                    .status(HttpStatus.UNPROCESSABLE_CONTENT);
         }
     }
 
